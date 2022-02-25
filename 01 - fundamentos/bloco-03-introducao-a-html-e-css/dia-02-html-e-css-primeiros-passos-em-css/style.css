@@ -1,0 +1,38 @@
+h1 {
+    font-size: 65px;
+    color:#FB8134;
+    font-family: sans-serif;
+    font-style: oblique;
+    text-align: end;
+    text-decoration:line-through;
+  }
+
+  li {
+    background-color: #46DBD9;
+    line-height: 25px;
+  }
+
+  .modify-color {
+    background-color: #5652FF;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 3em;
+  }
+
+  body{
+    font-size: 16px;
+  }
+
+  #yellow{
+    background-color: yellow;
+  }
+
+  #red{
+    background-color: red;
+  }
+
+  #brawn{
+    background-color:brown;
+  }
