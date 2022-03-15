@@ -54,17 +54,64 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // Exercicio 5:
 // Utilizando for , descubra qual o maior valor contido no array e imprima-o;
-let numberHigh = 0;
-for (let i = 0; i < numbers.length; i += 1) {
-    if (numberHigh <= numbers[i]) {
-        numberHigh = numbers[i];
-    }
-}
-    console.log(numberHigh);
+// let numberHigh = Number.NEGATIVE_INFINITY;  // função para menor valor negativo possível
+// for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] >= numberHigh) {
+//         numberHigh = numbers[i];
+//     }
+// }
+// console.log(numberHigh);
 
 
 // Exercicio 6:
+// Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
 
+// let countOdd = 0;
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 === 1) {
+//         countOdd = countOdd + 1;
+//     }
+// }
+// if (countOdd > 0) {
+//     console.log(countOdd);
+// } else {
+//     console.log('nenhum valor ímpar encontrado')
+// }
 
 
 // Exercicio 7:
+// Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+
+// let numberSmaller = Number.POSITIVE_INFINITY; // função para maior valor positivo possível
+// for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] < numberSmaller) {
+//         numberSmaller = numbers[i];
+//     }
+// }
+// console.log(numberSmaller);
+
+// Exercicio 8:
+// Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
+
+// let lengthArray = 25;
+// let arrayOfNumbers = [];
+// for (let i = 1; i <= lengthArray; i += 1) {
+//     arrayOfNumbers.push(i);
+// }
+// console.log(arrayOfNumbers);
+
+
+// Exercicio 9:
+// Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+
+let lengthArray = 25;
+let arrayOfNumbers = [];
+for (let i = 1; i <= lengthArray; i += 1) {
+    arrayOfNumbers.push(i);
+}
+let result = 0;
+for (let i2 = 0; i2 <= arrayOfNumbers.length; i2++) {
+    result = arrayOfNumbers[i2] / 2;
+console.log(result);
+}
