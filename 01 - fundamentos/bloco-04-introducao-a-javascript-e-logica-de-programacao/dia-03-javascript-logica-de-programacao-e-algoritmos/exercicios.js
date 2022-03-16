@@ -31,24 +31,20 @@ console.log(invertWord);
 // let array = ['java', 'javascript', 'python', 'html', 'css'];
 // Escreva dois algoritmos: um que retorne a maior palavra deste array e outro que retorne a menor. Considere o número de caracteres de cada palavra.
 
+
 let array = ['java', 'javascript', 'python', 'html', 'css'];
+let quantidade= [];
+let menor= 0;
 
-let biggestWord = array[0];
-let smallestWord = array[0];
-
-for(i = 0; i < array.length; i++) {
-    if(array[i].length > biggestWord.length) {
-        biggestWord = array[i];
+for (let index=0; index <array.length; index += 1){
+    quantidade.push(array[index].length);
+}
+for (let index2 = 0; index2 <quantidade.length; index2+=1){
+    if(quantidade[index2]<quantidade[index2]+1){
+    menor=array[index2];
     }
 }
-console.log('A maior palavra é: ' + biggestWord);
-
-for(i = array.length -1; i >= 0; i--) {
-    if(array[i].length > smallestWord.length) {
-        smallesttWord = array[i];
-    }
-}
-console.log('A menor palavra é: ' + smallestWord);
+console.log(menor);
 
 // está errado o exercício.
 
