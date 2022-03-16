@@ -55,9 +55,25 @@ console.log('A menor palavra é: ' + smallestWord);
 // Exercício 4
 // Um número primo é aquele divisível apenas por 1 e por ele mesmo. Sabendo disso, escreva um algoritmo que retorne o maior número primo entre 0 e 50.
 
-let number = 1;
-let maxNumber = 50;
-let arrayOfNumbers = [];
-for (let i = 1; i <= maxNumber; i++) {
+let numerosPrimos=[];
+let cont=0;
+let num=0;
 
-}
+    for(let index= 2 ;index <=50; index +=1){
+
+        cont=0;
+
+       for (let index2=1; index2 <= index; index2 +=1){
+
+           if(index%index2 ===0 ){
+               cont += 1;
+
+           }
+           num=index;
+           }
+           if(cont === 2){
+            numerosPrimos.push(num);
+        }
+        }
+        
+console.log(numerosPrimos[numerosPrimos.length-1]);
