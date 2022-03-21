@@ -11,3 +11,18 @@
     text-align: center;
     margin: 10px;
 }
+
+
+.paragraph3 {
+    border: 5px solid red;
+    height: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.paragraph4 {
+    border: 5px solid green;
+    height: 100px;
+    text-align: center;
+    margin: 10px;
+}

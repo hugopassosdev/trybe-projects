@@ -1,18 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Trybe DOM</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <p class="lenda">Ayrton Senna</p>
-    <p class="piloto-f1-atual">Lewis Hamilton</p>
-    <p class="piloto-f1-atual">Sebastian Vettel</p>
-    <p class="piloto-f1-atual">Lando Norris</p>
-    <div class="piloto-f1-atual">George Russel</div>
-    <div class="piloto-f1-atual">Daniel Ricciardo</div>
-    <span class="piloto-f1-atual">Kevin Magnussen</span>
-    <script src="script2.js"></script>
+    <div class="pilotos-com-titulo">
+        <p class="lenda">Ayrton Senna</p>
+        <p class="piloto-f1-atual">Lewis Hamilton</p>
+        <p class="piloto-f1-atual">Sebastian Vettel</p>
+    </div>
+    <div class="pilotos-sem-titulo">
+        <p class="piloto-f1-atual">Lando Norris</p>
+        <div class="piloto-f1-atual">George Russel</div>
+        <div class="piloto-f1-atual">Daniel Ricciardo</div>
+        <span class="piloto-f1-atual">Kevin Magnussen</span>
+        <script src="script2.js"></script>
+    </div>
+
+    <p id="Dona">Liberty Media</p>
+
 </body>
+
 </html>
+
+<!-- 
+(4) querySelector
+
+document.getElementById('Dona');
+<p id=​"Dona">​Liberty Media​</p>​
+
+No querySelector é necesspario especificar com # nos id e . nas classes para fazer os retornos especificados (por ser m ais genérico, é necessário especificar mais).
+
+document.querySelector('#Dona');
+<p id=​"Dona">​Liberty Media​</p>​
+
+document.querySelector('p');
+<p class=​"lenda">​Ayrton Senna​</p>​
+Acima, ele retornou apenas o primeiro elemento que encontrou.
+
+document.querySelector('.pilotos-sem-titulo p');
+<p class=​"piloto-f1-atual">​Lando Norris​</p>​
+Acima, retornou o primeiro parágrafo filho da classe pilotos-sem-titulos.
+É utilizado da mesma forma que quando queríamos indicar um seletor CSS.
+
+
+document.querySelector('.pilotos-sem-titulo .piloto-f1-atual');
+<p class=​"piloto-f1-atual">​Lando Norris​</p>​
+Acima, retorna o primeiro da classe .piloto-sem-titulo da classe .piloto-f1-atual
+
+
+(5) querySelectorAll
+
+document.querySelector('div')
+<div class=​"pilotos-com-titulo">​<p class=​"lenda">​Ayrton Senna​</p>​<p class=​"piloto-f1-atual">​Lewis Hamilton​</p>​<p class=​"piloto-f1-atual">​Sebastian Vettel​</p>​</div>​
+Retornou acima todos os elemento encapsulados na primeira div (pilotos-com-titulo)
+
+document.querySelectorAll('div')
+NodeList(4) [div.pilotos-com-titulo, div.pilotos-sem-titulo, div.piloto-f1-atual, div.piloto-f1-atual
+Retornou acima uma node list (lista de elementos - array) com todas as div que existem no documento.
+Mesmas preocupaçoes para trabalha-la que o getElementsById (acessar posições da lista).
+Exemplo:
+
+
+document.querySelectorAll("p")[0].style.backgroundColor = 'orange';
+'orange'
+document.querySelectorAll("p")[0].innerTextext = 'Lenda';
+Acima, alterou-se o primeiro parágrafo com a tag 'p' alterando a cor do fundo para laranja.
+
+document.querySelectorAll('.piloto-f1-atual').length;
+6
+retorna o tamanho do Array da lista acima (quantidade de divs no documento).
+
+O querySelectorAll recebe também seletores CSS.
+
+document.querySelectorAll('.pilotos-sem-titulo .piloto-f1-atual');
+NodeList(4) [p.piloto-f1-atual, div.piloto-f1-atual, div.piloto-f1-atual, span.piloto-f1-atual]
+Retorna a lista mãe de pilotos-sem-titulo que estão na sub-lista pilotos-f1-atual
+
+-->
+
+<!-- Tanto o querySelector quanto o querySelectorAll acessam CSS Selectors de todos os tipos. Ou seja, eles podem acessar muito além de valores de ids e classes. -->
