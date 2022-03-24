@@ -1,12 +1,131 @@
-<!DOCTYPE html>
+<!-- Parte I - Buscando elementos -->
+
+<!-- parentNode -->
+
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Receitas Trybe</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Feijão Tropeiro</h1>
+    </header>
+
+    <section class="ingredients-section">
+        <h2>Ingredientes</h2>
+        <ul class="ingredients-list">
+            <li class="ingredient-item">500g de feijão carioquinha cozido</li>
+            <li class="ingredient-item">200g de toucinho</li>
+            <li class="ingredient-item">1 concha de óleo</li>
+            <li class="ingredient-item">1 cebola média picada</li>
+            <li class="ingredient-item">4 dentes de alho</li>
+            <li class="ingredient-item">5 ovos</li>
+            <li class="ingredient-item">1 colher de sopa de sal com alho</li>
+            <li class="ingredient-item">cheiro verde a gosto</li>
+            <li class="ingredient-item">200g de farinhad e mandioca</li>
+        </ul>
+    </section>
+
+    <section class="recipe-preparation-section">
+        <h2>Modo de preparo</h2>
+
+        <ol class="recipe-preparation-list">
+            <li>Coloque o óleo em uma panela e doure os ingredientes até fritar bem</li>
+            <li>Adicione o alho e sal</li>
+            <li>Refogue o feijao, misturando tudo com a farinha</li>
+        </ol>
+    </section>
+</body>
+</html> -->
+
+
+<!-- 
+document.querySelector('.ingredient-item').parentNode
+<ul class=​"ingredients-list">​…​</ul>​ 
+ - Com o comando acima, conseguimos acessar o elemento pai de .ingredient-item ('ingredients-list')
+
+ document.querySelector('.ingredient-item').parentNode.parentNode.parentNode
+- Com o comando acima, concatenamos o parentNode para verificarmos o elemento pai de ingredient-item três níveis acima.
+- Importante: parentNode é uma propriedade de "somente leituta".
+
+-->
+
+<!-- 
+Entendeu? A propriedade parentNode acessa o elemento pai do elemento sobre o qual a propriedade é chamada. Mas ela não é a única forma de, a partir de um elemento, navegar para outros.
+
+Há, ao todo, as seguintes propriedades:
+
+    parentNode : retorna o nó pai.
+    parentElement : retorna o elemento pai.
+    childNodes : retorna um NodeList com todos os nós filhos.
+    children : retorna um HTMLCollection com todos os elementos filhos.
+    firstChild : retorna o primeiro nó filho.
+    firstElementChild : retorna o primeiro elemento filho.
+    lastChild : retorna o último nó filho.
+    lastElementChild : retorna o último elemento filho.
+    nextSibling : retorna o próximo nó.
+    nextElementSibling : retorna o próximo elemento.
+    previousSibling : retorna o nó anterior.
+    previousElementSibling : retorna o elemento anterior.
+ 
+É importante dizer que, à primeira vista, as propriedades nextSibling e nextElementSibling parecem fazer a mesma coisa, mas uma pega o próximo nó do DOM , enquanto a outra pega o próximo elemento, e nem sempre o próximo nó é um elemento.
+
+-->
+
+<!-- arquivo index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>  
+  <main>
+    <div id="start"></div>
+    nó
+    <p>elemento</p>
+  </main>
+  <script src="script1.js"></script>
 </body>
 </html>
+
+<!-- 
+Observação: para testar o código acima, crie um arquivo index.html e outro script.js , copie os códigos e salve os documentos. Para visualizar as saídas no console, dê start no Live Server, inspecione a página e abra o console.
+Primeiro, foi selecionado o elemento div utilizando o seu id , 'start'. Na sequência, aplicadas as propriedades nextSibling e nextElementSibling . Você pode ver que, nextSibling retornará o texto "nó" que representa o próximo nó do DOM a partir da div , enquanto que, nextElementSibling retornará o próximo elemento propriamente, ou seja, o elemento <p> .
+Entendeu? Então vamos praticar! Adicione o código abaixo a uma página HTML e adicione uma tag script . Você deverá fazer tudo a seguir usando somente JavaScript . -->
+
+<!-- <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main> -->
+
+<!-- 
+Acesse o elemento elementoOndeVoceEsta .
+
+Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+Acesse o primeiroFilho a partir de pai .
+Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+Agora acesse o terceiroFilho a partir de pai . 
+
+Feito em exemplo1.html e script2.html
+-->
