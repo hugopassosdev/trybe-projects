@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Formulário</h1>
+    <form action="" method="GET">
+        <label for="text-input">Digite seu nome</label>
+        <input type="text" placeholder="digite alguma coisa" required class="" value="teste" name="texto" id="text-input">
+        <br>
+        <br>
+        <textarea name="" id="" cols="30" rows="10">Texto já estabelecido</textarea>
+        <br>
+        <input type="checkbox" id="esporte-1" value="fut" name="esporte" checked> Futebol
+        <input type="checkbox" id="esporte-2" value="vol" name="esporte"> Vôlei
+        <input type="checkbox" id="esporte-3" value="pet" name="esporte"> Peteca
+        <input type="checkbox" id="esporte-4" value="bas" name="esporte"> Basquete
+        <br>
+        <br>
+        <label for="hub1"><input type="radio" id="hub1" name="hub" value="sp">São Paulo</label>
+            <input type="radio" id="hub2" name="hub" value="bh">Belo Horizonte
+            <input type="radio" id="hub3" name="hub" value="fl">Florianópolis
+            <input type="radio" id="hub4" name="hub" value="mc">Macedônia
+        <br>
+        <br>
+        <select name="estado" id="dropdown-estado">
+            <option value="sp">São Paulo</option>
+            <option value="ba">Bahia</option>
+            <option value="am">Amazonas</option>
+            <option value="mg">Minas Gerais</option>
+        </select>
+        <br>
+        <br>
+        <input type="password" name="senha">
+        <br>
+        <br>
+        <input type="week">
+        <br>
+        <br>   
+        <button type="submit" class="" name="" id="">Enviar</button>
+   
+    </form>
+
+</body>
+
+</html>
+
+
+<!-- 
+
+Atributos da Tag *form* 
+
+1- action: informa para onde os dados do formulário serão enviados (pode ser outra página HTML ou outro endereço).
+
+2- method: informa como os dados serão enviados (GET ou POST):
+GET => dados enviados pela URL.
+POST => dados enviados um pouco mais "escondidos".
+
+Atributos da Tag *input* (principal campo dentro de um form)
+É no input que falamos qual o tipo de entrada de dados que iremos fazer.
+type="text" => insere caixa de texto no input
+name="texto" => dá um rótulo para os dados inseridos (importante para o back-end)
+placeholder="digite alguma coisa" => coloca um texto na caixa de texto para você explicar o que o usuário deve colcar de informação.
+required => deixa o campo ser obrigatório antes de enviar o formulário.
+class="" => pode colocar uma classe css para tudo mais "elegante"
+value="" => já deixa um texto preenchido na caixa.
+id="text-input" => importante para identificar o forma e fazer manipulações com o getElementById ou querySelector
+
+Atributo da Tag *button*
+type="submit" => o botão servirá para enviar dados.
+
+Atributos da Tag *label*
+label => explica o campo que estamos usando (entrada do input).
+  propriedade for: cria um vinculo entre a label e o campo em si(coloca o mesmo id que foi escreito no input para criar este vínculo).
+Atributos da Tag *textarea* => campo que digitamos texto (colocamos muitas informações).
+Podemos colocar as mesmas propriedades do campo input.
+cols="30" rows="10" (colunas e linhas => tamanho da caixa que pe variada pelo usuário (pode deixar travada também))
+Se quisermos travar o tamanho do textarea, basta adicionar o seguinte estilo no CSS:
+textarea {
+    resize: none;
+}
+
+
+input type="checkbox" => cria uma caixinha da check. É importante o atributo name ser o mesmo para todos para eles ficarem vinculados.
+
+input type="radio" => cria uma bolinha de marcação.
+colocando o mesmo "name" você conseguirá marcar somente um radio.
+colocando uma label em volta do input radio, faz com que além do radio ser clicável, o texto do input label também ficará (deixando mais fácil a navegação)
+
+drop down list => caixinha com várias opções para selecionar
+    dentro da tag select vc coloca a tah option e vai escrevendo os valores que irão aparecer
+
+    input type="password" => caixinha de texto que quando vc digita aparecem bolinhas.
+
+    input type="file" => input para você enviar um arquivo
+    caso vc utlize o metodo POST em seu formulário, ao enviar arquivos, será necessário incluir o atributo enctype="multipart/form-data" na tag form (para atribui-la a opção de enviar arquivos também).
+
+
+-->
+
+
+
+<!-- Você observou no vídeo que temos uma grande quantidade de types e atributos para o <input> para usar em formulários.
+Neste momento, não há necessidade de gravar todas as informações, no entanto é importante que você extraia o conceito e consulte sempre as referências nos recursos adicionais.
+De modo geral, estes são os types que podem ser usados de acordo com a aplicação do campo input:
+    button : define um botão;
+    checkbox : permite que o usuário selecione ZERO ou MAIS opções de um número limitado de escolhas;
+    color : campos de entrada que devem conter uma cor para selecionar;
+    date : campos de entrada que devem conter uma data;
+    datetime-local : campo de entrada de data e hora, sem fuso horário;
+    email : campos de entrada que devem conter um endereço de e-mail;
+    file : campo de seleção de arquivo e um botão "Procurar" para uploads de arquivos;
+    month : permite ao usuário selecionar um mês e ano;
+    number : define um campo de entrada numérico;
+    password : os caracteres do campo de senha são mascarados (mostrados como asteriscos ou círculos);
+    radio : permite que um usuário selecione APENAS UMA de um número limitado de opções;
+    range : define um controle para inserir um número (como um controle deslizante). Intervalo padrão é de 0 a 100;
+    reset : redefinirá todos os valores do formulário para seus valores padrão;
+    search : usado para campos de pesquisa;
+    submit : envia dados de formulário a um manipulador de formulários(especificado na action do form );
+    tel : campos de entrada que devem conter um número de telefone;
+    text : campo de entrada de texto de linha única;
+    time : permite que o usuário selecione um horário (sem fuso horário);
+    url : campos de entrada que devem conter um endereço URL;
+    week : permite ao usuário selecionar uma semana e um ano.
+O valor default de um type , sempre será text . Portanto, é preciso especificar de acordo com a sua necessidade.
+Como complemento, temos os atributos que são propriedades inseridas para seus inputs HTML . Com elas, você poderá adicionar funcionalidades ao seu formulário. Temos os seguintes atributos abaixo:
+    value : especifica um valor inicial para um campo de entrada;
+    readonly : especifica que um campo de entrada é somente leitura;
+    disabled : especifica que um campo de entrada deve ser desativado;
+    size : especifica a largura visível, em caracteres, de um campo de entrada;
+    maxlength : especifica o número máximo de caracteres permitidos em um campo de entrada;
+    min e max : especificam os valores mínimo e máximo para um campo de entrada;
+    multiple : especifica que o usuário tem permissão para inserir mais de um valor em um campo de entrada;
+    pattern : especifica uma expressão regular em relação à qual o valor do campo de entrada é verificado;
+    placeholder : especifica uma dica curta que descreve o valor esperado de um campo de entrada;
+    required : especifica que um campo de entrada deve ser preenchido antes de enviar o formulário;
+    step : especifica os intervalos de números válidos para um campo de entrada;
+    autofocus : especifica que um campo de entrada deve obter foco automaticamente quando a página é carregada;
+    height e width : especificam a altura e a largura de um elemento;
+    autocomplete : especifica se um campo de entrada deve ter o preenchimento automático ativado ou desativado. -->
+
+    <!-- Para fixar
+Vamos praticar um pouco, criando uma tela de login? 🔥
+1 - Adicione os campos de entrada para email e senha.
+2 - Adicione um checkbox com o texto Lembre-me .
+3 - Adicione um botão com o texto Entrar .
+4 - Adicione os placeholder Digite seu email e Digite sua senha para os campos de email e senha. -->
