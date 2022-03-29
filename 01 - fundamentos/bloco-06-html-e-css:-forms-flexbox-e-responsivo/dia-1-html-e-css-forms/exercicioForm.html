@@ -1,0 +1,106 @@
+<!-- 
+Criando um formulário para concorrer a uma viagem
+
+Imagine que você está surfando na internet. Você agora é uma pessoa desenvolvedora, cansada após finalmente terminar seus estudos e pensando nas suas maravilhosas e merecidas férias.
+Então, você se depara com um anúncio do concurso TrybeTrip, que premia com uma viagem totalmente paga e com várias opções de destino. Como você imagina que seria a página para concorrer a essa viagem?
+
+Concorda que seria uma espécie de formulário?
+
+O exercício hoje será desenvolver uma página web com o formulário da TrybeTrip. Desenvolva-o em um arquivo chamado form.html . A estruturação de sua página deverá ficar semelhante com a imagem abaixo.
+
+formImagem.png
+
+A imagem acima foi criada no Excalidraw , ele serve para criar diagramas e estruturas num quadro branco, muito útil para tirar aquela ideia de layout de sua cabeça e colocá-la em visualização. Outra ferramenta ótima para quem se interessa em design é o Figma . Vale a pena dar uma olhada.
+
+Dicas:
+- Crie o costume de adicionar ID's a elementos únicos e classes a elementos com comportamentos similares, pois isso facilitará muito sua vida como pessoa desenvolvedora;
+- Procure saber mais sobre as Tags <label> e <fieldset> clicando nas documentações a seguir:
+Label ;
+Fieldset .
+
+1- O formulário deverá permitir que o usuário insira os seguintes campos:
+Nome Completo:
+Limitado entre 10 e 40 caracteres.
+
+E-mail:
+Limitado entre 10 e 50 caracteres.
+
+Destino Preferido:
+4 opções: Cidade, Campo, Praia, Montanhas.
+
+Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+
+Limite de 500 caracteres.
+
+Qual a melhor data para realizar sua viagem?
+
+Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+
+Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+
+Esses serão os principais campos utilizadas nos próximos exercícios.
+
+2- Crie um botão para enviar as informações preenchidas.
+Agora vamos utilizar um pouco de javascript, para isso crie o arquivo script.js e o referencie no HTML.
+Dica: Coloque a tag <script> no final do seu body.
+
+3- Interrompa o comportamento padrão do botão submit utilizando o método preventDefault() . Nossa amiga Carol Silva nos contou um pouco sobre como fazer isso, lembra?
+
+4- Crie um botão que limpe as informações contidas nos campos;
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TrybeTrip</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<h1 id="titulo">Formulário TrybeTrip</h1>
+
+<body>
+    <form action="" method="GET" enctype="multipart/form-data">
+        <div class="quadro">
+            <label for="nome-completo">Nome Completo:</label>
+            <input type="text" name="nome-completo" placeholder="insira seu nome" id="" required minlength="10" maxlength="40">
+            <br>
+            <label for="e-mail">Email:</label>
+            <input type="email" name="e-mail" placeholder="insira seu e-mail" id="input-email" required minlength="10" maxlength="50">
+            <br>
+            <h2>Local que gostaria conhecer</h2>
+            <label for="local-1">
+                <input type="radio" id="local-1" name="local-favorito" value="cidade" checked>Cidade
+            </label>
+            <label for="local-2">
+                <input type="radio" id="local-2" name="local-favorito" value="campo">Campo
+            </label>
+            <label for="local-3">
+                <input type="radio" id="local-3" name="local-favorito" value="praia">Praia
+            </label>
+            <label for="local-4">
+                <input type="radio" id="local-4" name="local-favorito" value="montanha">Montanhas
+            </label>
+            <br>
+            <h2>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h2>
+            <textarea name="porque" id="textarea-1" cols="30" rows="5" maxlength="500" placeholder="escreva aqui"></textarea>
+            <br>
+            <label for="data">Qual a melhor data para realizar sua viagem?</label>
+            <input type="date" id="data" name="data" required>
+            <br>
+            <label for="checkbox-aceite-1">
+                <input type="checkbox" name="concordo-1" id="checkbox-aceite-1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+            </label>
+            <br>
+            <label for="checkbox-aceite-2">
+                <input type="checkbox" name="concordo-2" id="checkbox-aceite-2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+            </label>
+        </div>
+        <br>
+        <button type="submit" id="buttonSubmit">Participar do concurso TrybeTrip</button>
+        <button type="button" id="buttonClear">Apagar informações</button>
+    </form>
+    <script src="script1.js"></script>
+</body>
+</html>
