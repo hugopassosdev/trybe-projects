@@ -12,6 +12,56 @@ const printName = function () {
 //   A expressão acima está correta. Mas como você verá nos exemplos a seguir, é possível deixá-la ainda mais direta e léxica. Você aprenderá com alguns exemplos as vantagens de usarmos mais essa novidade do Javascript ES6 - arrow functions . Uma das aplicações para arrow functions é em funções anônimas. Em Javascript, é muito comum não precisarmos nomear funções, como mostrado no exemplo acima. Isso pode acontecer quando criamos funções que não serão reutilizadas, ou que serão passadas como argumento para uma outra função. Chamamos funções sem um nome específico de funções anônimas.
 // Primeiramente, assista ao vídeo a seguir.
 
+// Jeito 1 de criar função;
+function soma (num1, num2) {
+  return num1 + num2;
+}
+console.log(soma(2, 2));
+
+// Jeito 2 de criar função (declarando uma constante);
+const soma = function (num1, num2) {
+  return num1 + num2;
+}
+console.log(soma(2, 2));
+
+// Novo jeito de declarar função (EcmaScript6)
+const soma = (num1, num2) => {
+  return num1 + num2;
+}
+console.log(soma(2, 2));
+
+// Novo jeito de declarar função (EcmaScript6 em uma linha)
+const soma = (num1, num2) => num1 + num2;
+
+console.log(soma(2, 2));
+
+// Outro exemplo:
+
+function contaPalavras (frase) {
+  return frase.split(' ').length;
+}
+console.log(contaPalavras('Fala Trybo, beleza?'));
+
+//Novo jeito
+const contaPalavras = frase => frase.split(' ').length;
+console.log(contaPalavras('Fala Trybo, beleza?'));
+
+// Último exemplo do vídeo:
+
+function objetoPessoa (nome, idade) {
+  return {
+    nome: nome,
+    idade: idade
+  }
+}
+console.log(objetoPessoa('Joaquim', 25));
+
+//Novo jeito
+const objetoPessoa = (nome, idade) => ({nome: nome, idade: idade});
+
+console.log(objetoPessoa('Joaquim', 25));
+//Observação: quando o retorno é um objeto, é necessário colocá-lo entre parêntesis para não confundir o JavaScript.
+
 // arrow functions nada mais é do que uma forma diferente de se declarar funções escrevendo menos código. Veja abaixo como ficaria a função printName utilizando a sintaxe da arrow function :
 
 const printName = () => {
