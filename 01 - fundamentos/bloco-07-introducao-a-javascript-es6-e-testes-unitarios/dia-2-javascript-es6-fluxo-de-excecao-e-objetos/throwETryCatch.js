@@ -66,3 +66,5 @@ const verifyIsNumber = (value1, value2) => {
 
 //   Agora sim! Você criou um fluxo para quando nosso código é executado com sucesso, representado pelo bloco try , que tenta fazer a soma de dois valores. Esse bloco chama a função recém-criada verifyIsNumber , que verifica se os parâmetros passados são números. Quando se depara com um valor que não é um número, o código lança um erro com o throw , que é capturado pelo catch no fluxo de exceção, através da variável error (aqui podemos usar qualquer nome). Dentro do catch retornamos a chave error.message , uma propriedade do objeto nativo Error que contém a mensagem de erro criada anteriormente.
 //   Como sempre, dê uma olhada na documentação oficial para aprofundar seus conhecimentos.
+
+
