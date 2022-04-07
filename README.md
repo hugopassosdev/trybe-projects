@@ -25,7 +25,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [X] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [X] 3-4: _HTML Semântico_
-- [X] 3-5: _[Projeto - HTML & CSS]()_
+- [X] 3-5: _[Projeto - HTML & CSS](https://github.com/tryber/sd-021-b-project-lessons-learned/pull/118)_
 
 ##### Bloco 4: Introdução - JavaScript
 
@@ -41,8 +41,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 5-2: _JavaScript - Trabalhando com elementos_
 - [X] 5-3: _JavaScript - Eventos_
 - [X] 5-4: _JavaScript - Web Storage_
-- [X] 5-6: _[Projeto - Arte com Pixels]()_
-- [X] 5-7: _[Projeto - Lista de tarefas]()_
+- [X] 5-6: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-021-b-project-pixels-art/pull/130)_
+- [X] 5-7: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-021-b-project-todo-list/pull/119)_
 
 ##### Bloco 6: HTML & CSS avançado
 
@@ -51,14 +51,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 6-3: _CSS Flexbox - Part 1_
 - [X] 6-4: _CSS Flexbox - Part 2_
 - [X] 6-5: _CSS Responsivo - Mobile First_
-- [X] 6-6: _[Projeto - Tribewarts]()_
+- [X] 6-6: _[Projeto - Tribewarts](https://github.com/tryber/sd-021-b-project-trybewarts/pull/34)_
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
 - [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [X] 7-2: _JavaScript ES6 - Objects_
 - [X] 7-3: _Testes unitários em JavaScript_
-- [X] 7-4: _[Projeto - JavaScript Testes Unitários]()_
+- [X] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/tryber/sd-021-b-project-js-unit-tests/pull/84)_
 
 ##### Bloco 8: JavaScript ES6
 
