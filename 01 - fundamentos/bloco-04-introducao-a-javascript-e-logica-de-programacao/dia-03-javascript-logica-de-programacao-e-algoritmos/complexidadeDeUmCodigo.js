@@ -1,6 +1,0 @@
-// Um código muito complexo não é uma boa prática no mundo da programação. Isso dificulta não só o acompanhamento do código, mas também a testagem ou a implementação de mudanças.
-// É normal, principalmente no começo, que o seu código apresente erros de complexidade e você precise encontrar uma maneira de desenvolver a sua lógica de uma forma diferente.
-// Para medir a complexidade de um código, existe a complexidade ciclomática , que é uma métrica de software que considera os caminhos independentes que o algoritmo pode tomar. E, quanto maior for a complexidade ciclomática , mais difícil é fazer o acompanhamento do código, sua manutenção e testagem.
-// Para manter a complexidade baixa, você deve sempre tentar simplificar os caminhos possíveis, como, por exemplo, quebrando o seu código em partes menores.
-// Mas que caminhos são esses?
-// Você aprendeu sobre if/else , certo? Por exemplo, se o seu código apresenta apenas uma condicional (somente um if/else ), ele tem dois caminhos, ou faz isso ou faz aquilo. E, quanto mais caminhos tiver, mais complexo vai ser. Existem várias formas de aumentar a quantidade desses caminhos, não só usando condicionais. Pode-se, também, por exemplo, aumentar usando laços de repetição, como for . Mas não foque nisso agora!
