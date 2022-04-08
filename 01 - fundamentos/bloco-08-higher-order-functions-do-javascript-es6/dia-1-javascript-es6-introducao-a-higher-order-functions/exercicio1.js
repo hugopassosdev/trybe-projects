@@ -1,0 +1,29 @@
+// 1 - Crie uma função que retorne um objeto no formato { nomeCompleto, email } representando uma nova pessoa contratada. Passe sua função como parâmetro da HOF newEmployees para criar cada pessoa contratada em seu respectivo id . A sua função deve receber como parâmetro o nome completo da pessoa funcionária e a partir dele gerar automaticamente um email no formato nome_da_pessoa@trybe.com .
+
+// const newEmployees = () => {
+//     const employees = {
+//       id1: '', // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
+//       id2: '', // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
+//       id3: '', // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
+//     }
+//     return employees;
+//   };
+
+  const employeeGenerator = (fullName) => {
+    const email = fullName.toLowerCase().split(' ').join('_');
+    // toLowerCase para tornar tudo minúsculo
+    // split dividi a string em substring de acordo com o parametro dado (no exemplo foi um espaço), formando um array
+    // join junta os elementos de um array. no exemplo entre as antigas strings tará um '_'.
+    return { fullName, email: `${email}@trybe.com` };
+  };
+  
+  const newEmployees = (employeeGenerator) => {
+    const employees = {
+      id1: employeeGenerator('Hugo Oliveira'),
+      id2: employeeGenerator('Danielle Xavier'),
+      id3: employeeGenerator('Israel Passos'),
+    };
+    return employees;
+  };
+  
+  console.table(newEmployees(employeeGenerator));
